@@ -21,6 +21,8 @@
 /*  STEP 1: add a base font-size to the body element 
 hint: use "font-size" property */
 html {
+    font-size: 16px;
+
 }
 /* Add margins to the body so that the content 
   doesn't reach the edges of the view screen
@@ -28,6 +30,8 @@ html {
   margin-top and bottom can be zero */
 body {
   max-width: 850px;
+  margin: 0 auto;
+
 }
 
 /* logo styling
@@ -37,6 +41,9 @@ body {
 3. apply margins or padding to the logo to position it */
 
 .logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 /* STYLE THE NAV BAR! */
@@ -49,6 +56,16 @@ body {
  */
 
 nav {
+  align-items: center;
+  display: flex;
+  flex: 6;
+  background-color: blanchedalmond;
+  margin-bottom: 0%;
+}
+nav.sticky {
+  position: -webkit-sticky;  
+  position: sticky;
+  top: 0;
 }
 /* Link List Styling:
 1. Make the ul a flex container so that the list items
@@ -56,13 +73,17 @@ inside of it display horizontally
 2. remove the bullet point of the list items
   */
 nav ul {
+  display: flex;
 }
 /* Style the list items
 1. adjust the font size (use rem units)
 2. add padding to give the links some space 
  */
 
-nav ul li {
+nav ul li{
+  padding: 25px;
+  list-style: none;
+  
 }
 
 /* Adjust the style of the navigation links */
@@ -74,19 +95,33 @@ nav ul li {
 
 li a {
   color: black;
+  text-decoration: none;
 }
 /* Alter the colors here for links that have been visited,
 are unvisited, are being clicked on, and are being hovered
 over. */
 li a:visited {
-  color: black;
+  color: rgb(98, 55, 198);
 }
 li a:hover {
-  color: black;
+  color: rgb(243, 232, 232);
 }
 
 li a:active {
-  color: black;
+  color: rgb(0, 0, 0);
+}
+
+.red {
+  color: red;
+}
+.orange{
+  color: orange;
+}
+.green {
+  color: green;
+}
+.red, .orange, .green {
+  font-family: cursive, lucida handwriting;
 }
 
 /* Style the header 
@@ -98,6 +133,9 @@ li a:active {
 header {
   background-image: url("/images/food-banner.jpg");
   background-size: cover;
+  /* width: 150px; */
+  height: 380px ;
+  padding-top: 0px;
 }
 /* Make sure the header text is visible against the 
 background image.
@@ -106,6 +144,10 @@ background image.
 behind the text if the 
 text is hard to read. */
 header h1 {
+  text-align: center;
+  color: blue;
+  
+  padding: 150px 0;
 }
 
 /* MAIN STYLING
@@ -119,7 +161,10 @@ header h1 {
 */
 main {
   max-width: 850px;
+  text-align: center;
+  padding: 0 40px;
 }
+
 /* Make the top "recipe summary" section stand out in some way.
 For example, change the style of the text to be different
 from other text on the page.
@@ -128,9 +173,11 @@ from other text on the page.
 3. adjust font styles, for example font-style: italic 
  */
 .recipe-summary {
+  text-align: left;
 }
 
 .recipe-summary p {
+  font-family: cursive, lucida handwriting;
 }
 
 /* Style the "Skip to Recipe Button */
@@ -143,7 +190,12 @@ site just want the recipe, and will be clicking this button.
 4. add some padding so that the button text doesn't touch the 
 button's border.
  */
-.skip-to-recipe-btn a {
+.skip-to-recipe-btn  {
+  background-color: darkorange;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
 }
 
 /*  STYLE THE BLOG TEXT
@@ -155,9 +207,13 @@ right against the edge of the screen at any screen size
 readability*/
 
 .blog p {
-  max-width: 700px;
+  max-width: 850px;
+  text-align: left;
 }
 
+ol h3,li{
+  text-align: left;
+}
 /* STYLE THE RECIPE SECTION */
 /* Make the recipe section stand out
   1. give it a background color, but make sure 
@@ -170,6 +226,9 @@ readability*/
   5. create a bottom margin between this section and the footer*/
 
 .current-recipe {
+  text-align: left;
+  background-color:blanchedalmond;
+  padding: 20px 20px;
 }
 
 /* Add a frame around the recipe image 
@@ -191,4 +250,8 @@ readability*/
 4. use padding or margins to make the text readable
 5. adjust the font-size  */
 footer {
+  text-align: center;
+  background-color: darkgreen;
+  color: white;
+  padding: 30px 0;
 }
